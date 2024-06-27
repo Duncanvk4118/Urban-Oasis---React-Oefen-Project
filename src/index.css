@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #0099cc;
+  --secondary-color: #00a676;
+
+  --gray-tint1: #d3d3d3;
+  --gray-tint2: #4b4b4b;
+  --gray-tint3: #a0522d;
+  --gray-tint4: #8b4513;
+
+  --geel: #ffd700;
+  --terracotta: #e2725b;
+}
+
+body {
+  color: #fff;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
