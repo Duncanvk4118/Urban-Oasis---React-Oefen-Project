@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
   --primary-color: #0099cc;
   --secondary-color: #00a676;
@@ -11,16 +13,32 @@
   --terracotta: #e2725b;
 }
 
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  color: #fff;
+  color: #adadad;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: auto;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+strong,
+b {
+  font-family: "Merriweather", sans-serif;
 }

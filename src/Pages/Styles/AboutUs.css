@@ -1,21 +1,8 @@
-body {
+div#contentAbout {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.content {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   max-width: 800px;
+  width: 100%;
   padding: 20px;
 }

@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <div>
       <h1>About Us</h1>
-      <div className="content">
+      <div id="contentAbout">
         <h3>Our Vision</h3>
         <p>
           Welcome to Urban Oasis, where the bustling city meets tranquility. Our
