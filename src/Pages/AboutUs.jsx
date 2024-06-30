@@ -1,11 +1,11 @@
 import React from "react";
-import "./Styles/AboutUs.css";
+import styles from "./Styles/AboutUs.module.css";
 
 export default function AboutUs() {
   return (
-    <div>
+    <div className={styles.contentAbout}>
       <h1>About Us</h1>
-      <div id="contentAbout">
+      <div>
         <h3>Our Vision</h3>
         <p>
           Welcome to Urban Oasis, where the bustling city meets tranquility. Our

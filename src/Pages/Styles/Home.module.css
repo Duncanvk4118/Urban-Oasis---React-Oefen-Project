@@ -1,0 +1,284 @@
+.homePage {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.homePage h1 {
+  font-weight: 700;
+}
+
+.homePage img {
+  width: 50rem;
+  height: 50rem;
+}
+
+.generalText {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+}
+
+/* Multi Use Code */
+
+.top,
+.mid,
+.bot {
+  margin-bottom: 0;
+  height: 100vh;
+  background-color: rgb(239, 255, 244);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.top .generalText h1,
+.bot .generalText h1 {
+  margin: 0 0 0 3rem;
+}
+
+.top .generalText p,
+.bot .generalText p {
+  margin: 1rem 0 0 2.5rem;
+  max-width: 500px;
+}
+
+.topImg,
+.botImg {
+  margin: 0 5rem 0 5rem;
+  width: 50rem;
+  height: 35rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Section */
+.top {
+  color: #b8c1b0;
+}
+.top:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -4em;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(239, 255, 244),
+    rgb(234, 255, 251) 90%
+  );
+  width: 100%;
+  height: 4em;
+}
+
+.topImg {
+  animation: blobAnimationTop 7.5s infinite alternate;
+}
+
+@keyframes blobAnimationTop {
+  0% {
+    border-radius: 60% 37% 43% 50%;
+  }
+  35% {
+    border-radius: 40% 50% 60% 50%;
+  }
+  70% {
+    border-radius: 50% 40% 60% 50%;
+  }
+  100% {
+    border-radius: 60% 37% 43% 50%;
+  }
+}
+
+/* Mid Section */
+.mid {
+  background-color: rgb(234, 255, 251);
+  color: #b0c1c0;
+}
+
+.mid::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -70em;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(234, 255, 251),
+    rgb(241, 248, 255) 90%
+  );
+  width: 100%;
+  height: 4em;
+}
+
+.mid h1 {
+  margin: 0 3rem 0 0;
+}
+
+.midImg {
+  animation: blobAnimationMid 7.5s infinite alternate;
+  margin: 0 0 0 5rem;
+  width: 50rem;
+  height: 35rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.mid .generalText h1 {
+  margin: 0 3rem 0 0;
+}
+
+.mid .generalText p {
+  margin: 1rem 2.5rem 0 0;
+  max-width: 500px;
+}
+
+@keyframes blobAnimationMid {
+  0% {
+    border-radius: 11% 83% 45% 68% / 50% 62% 79% 91%;
+  }
+  35% {
+    border-radius: 40% 60% 20% 80% / 70% 30% 90% 50%;
+  }
+  70% {
+    border-radius: 55% 25% 75% 35% / 45% 85% 65% 25%;
+  }
+  100% {
+    border-radius: 11% 83% 45% 68% / 50% 62% 79% 91%;
+  }
+}
+
+/* Bottom Section */
+.bot {
+  background-color: rgb(241, 248, 255);
+  color: #b0bbc1;
+}
+
+.bot::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -138em;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgb(241, 248, 255), #fff 90%);
+  width: 100%;
+  height: 4em;
+}
+
+.botImg {
+  animation: blobAnimationBot 7.5s infinite alternate;
+}
+
+@keyframes blobAnimationBot {
+  0% {
+    border-radius: 15% 70% 55% 40% / 60% 45% 30% 85%;
+  }
+  35% {
+    border-radius: 35% 50% 65% 25% / 75% 55% 40% 20%;
+  }
+  70% {
+    border-radius: 45% 20% 80% 60% / 35% 70% 85% 50%;
+  }
+  100% {
+    border-radius: 15% 70% 55% 40% / 60% 45% 30% 85%;
+  }
+}
+
+@media only screen and (max-width: 1048px) {
+  .top,
+  .mid,
+  .bot {
+    height: 40vh;
+  }
+  .homePage h1 {
+    font-weight: 500;
+    font-size: larger;
+  }
+  .homePage p {
+    font-size: small;
+  }
+  .topImg,
+  .botImg,
+  .midImg {
+    width: 30rem;
+    height: 25rem;
+  }
+  .homePage img {
+    width: 30rem;
+    height: 30rem;
+  }
+  .top::after {
+    bottom: 65em;
+  }
+  .mid::after {
+    bottom: 20em;
+  }
+  .bot::after {
+    bottom: -30em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top,
+  .mid,
+  .bot {
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .homePage h1 {
+    font-weight: 400;
+    font-size: larger;
+  }
+  .homePage p {
+    font-size: small;
+  }
+  .topImg,
+  .botImg,
+  .midImg {
+    display: block;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .generalText {
+    width: 100%;
+  }
+
+  .homePage img {
+    width: 30rem;
+    height: 30rem;
+  }
+  .top::after {
+    bottom: 8em;
+  }
+  .mid::after {
+    bottom: -40em;
+  }
+  .bot::after {
+    bottom: -90em;
+  }
+
+  .mid .generalText p {
+    margin: 1rem 0 0 2.5rem;
+    max-width: 500px;
+  }
+  .mid .generalText h1 {
+    margin: 0 0 0 3rem;
+  }
+}

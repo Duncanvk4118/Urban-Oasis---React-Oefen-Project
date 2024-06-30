@@ -1,0 +1,81 @@
+/* Styles/Home.module.css */
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9fcf7;
+  color: #5b5b5b;
+}
+
+.main::after {
+  content: "";
+  display: block;
+}
+
+.Blob {
+  width: 60%;
+  height: 70%;
+  background: url(../../Images/City.jpeg);
+  background-size: cover;
+  border: 1rem solid #fff;
+  animation: blobTrans 20s infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.Blob:hover {
+  animation-play-state: paused;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.5s;
+  margin: 6rem 0 0 0;
+}
+
+.formInput input,
+.formInput textarea {
+  width: 30rem;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formInput textarea {
+  resize: none;
+}
+
+@keyframes blobTrans {
+  0% {
+    border-radius: 50% 40% 60% 30%;
+  }
+  50% {
+    border-radius: 10% 80% 50% 80%;
+  }
+  100% {
+    border-radius: 70% 50% 70% 10%;
+  }
+}
+
+.inputManager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputManager span {
+  align-self: flex-start; /* Zorg ervoor dat de span op flex-start wordt uitgelijnd */
+  color: #5b5b5b;
+  font-weight: 800;
+}

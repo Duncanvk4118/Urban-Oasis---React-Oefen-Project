@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <Link className="navbar-brand" to="/">
+            Urban Oasis
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,50 +24,59 @@ export default function Navbar() {
             <div className="d-flex">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <Link className="nav-link active" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Link
-                  </a>
+                  <Link className="nav-link" to="#">
+                    Parks
+                  </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/aboutUs">
+                    About Us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">
+                    Contact
+                  </Link>
+                </li>
+                {/* <li>
+                  <small>Coming Soon: </small>
+                </li> */}
                 <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
+                  <Link
+                    className="nav-link dropdown-toggle disabled"
+                    to="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Dropdown
-                  </a>
+                    <small>
+                      <span className="badge text-bg-secondary">
+                        Coming Soon
+                      </span>
+                    </small>
+                    {/* Interaction */}
+                  </Link>
+
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Another action
-                      </a>
+                      <Link className="dropdown-item disabled" to="#">
+                        Events
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
+                      <Link className="dropdown-item disabled" to="#">
+                        Blog
+                      </Link>
                     </li>
                   </ul>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled" aria-disabled="true">
-                    Disabled
-                  </a>
                 </li>
               </ul>
             </div>
