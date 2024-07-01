@@ -1,8 +1,35 @@
-.contentAbout {
+.totalDisplay {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  max-width: 800px;
   width: 100%;
-  padding: 20px;
+  padding: 4rem;
+}
+
+.randomPark {
+  color: rgb(245, 197, 78);
+}
+
+.randomContainer {
+  align-items: center;
+  justify-content: center;
+}
+
+.allParksTable {
+  margin-top: 100px;
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  color: rgb(174, 174, 174);
+  border: 2px solid #000;
+}
+
+.park {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 25px;
+  background-color: #f9f9f9;
 }
