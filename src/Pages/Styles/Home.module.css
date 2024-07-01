@@ -198,6 +198,22 @@
   }
 }
 
+.mid.generalText .mid.midImg,
+.bot.generalText,
+.bot.botImg {
+  transform: translateX(100);
+  transition: all 1s ease-in-out;
+}
+
+.mid.active ~ .mid.midImg,
+.mid.active ~ .mid.generalText,
+.bot.active ~ .mid.botImg,
+.bot.active ~ .mid.generalText {
+  transform: translateX(0);
+}
+
+/* Responsive Section */
+
 @media only screen and (max-width: 1048px) {
   .top,
   .mid,

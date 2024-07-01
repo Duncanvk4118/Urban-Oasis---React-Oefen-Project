@@ -1,40 +1,79 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Styles/Contact.module.css";
 
 export default function Contact() {
-  const [name, setName] = useState(null);
-  const [mail, setMail] = useState(null);
-  const [phone, setPhoneNumber] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [phone, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    if (
+      name.length < 3 ||
+      mail.length <= 3 ||
+      phone.length < 10 ||
+      message.length < 25
+    ) {
+      e.preventDefault();
+      return false;
+    } else {
+      e.preventDefault();
+      alert(
+        "Successfully submitted the form\n" +
+          "Name: " +
+          name +
+          "\n" +
+          "Email: " +
+          mail +
+          "\n" +
+          "Phone Number: " +
+          phone +
+          "\n" +
+          "Message: " +
+          message
+      );
+      setName("");
+      setMail("");
+      setPhoneNumber("");
+      setMessage("");
+    }
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.Blob}>
-        <form action="" className={styles.formInput}>
+        <form action="" className={styles.formInput} onSubmit={handleSubmit}>
           <label className={styles.inputManager}>
             <span>Name</span>
             <input
               type="text"
-              onKeyUp={(e) => {
+              value={name}
+              onChange={(e) => {
                 setName(e.target.value);
               }}
+              placeholder="Input should be 3 or more characters"
             />
           </label>
           <label className={styles.inputManager}>
             <span>Email</span>
             <input
-              type="text"
-              onKeyUp={(e) => {
+              type="email"
+              value={mail}
+              onChange={(e) => {
                 setMail(e.target.value);
               }}
+              placeholder="Input must contain '@' and '.'"
             />
           </label>
           <label className={styles.inputManager}>
             <span>Phone Number</span>
             <input
               type="tel"
-              onKeyUp={(e) => {
+              value={phone}
+              onChange={(e) => {
                 setPhoneNumber(e.target.value);
               }}
+              placeholder="Input should be 10 characters"
             />
           </label>
           <label className={styles.inputManager}>
@@ -42,31 +81,14 @@ export default function Contact() {
             <textarea
               name="textArea"
               id="textInput"
-              placeholder="Typ here your message"
-              onKeyUp={(e) => {
+              value={message}
+              onChange={(e) => {
                 setMessage(e.target.value);
               }}
+              placeholder="Input should be 25 or more characters"
             ></textarea>
           </label>
-          <button
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              alert(
-                "Successfully submitted the form" +
-                  " Name: " +
-                  name +
-                  " Email: " +
-                  mail +
-                  " Phone Number: " +
-                  phone +
-                  " Message: " +
-                  message
-              );
-            }}
-          >
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>

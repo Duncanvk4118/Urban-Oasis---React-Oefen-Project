@@ -5,6 +5,17 @@ import parkImg from "../Images/Park.jpeg";
 import TowerImg from "../Images/Towers.jpeg";
 
 export default function Home() {
+  const paragraphs = document.querySelectorAll("section");
+  document.addEventListener("scroll", () => {
+    paragraphs.forEach((p) => {
+      if (window.scrollY + window.innerHeight > p.offsetTop) {
+        p.classList.add("active");
+      } else {
+        p.classList.remove("active");
+      }
+    });
+  });
+
   return (
     <div className={styles.homePage}>
       {/* Top Section */}
